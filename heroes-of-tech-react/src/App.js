@@ -1,15 +1,10 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Heroes of Tech, ASSEMBLE!
-        </p>
-      </header>
+      <h1> Hello, World! </h1>
     </div>
   );
 }
