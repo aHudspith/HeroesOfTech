@@ -28,6 +28,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to heroesOfTechExpress application." });
 });
 
+require("./app/routes/heroes.route")(app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

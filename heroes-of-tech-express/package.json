@@ -10,6 +10,7 @@
     "nodejs",
     "express",
     "sequelize",
+    "one-to-many",
     "mysql",
     "rest",
     "api"

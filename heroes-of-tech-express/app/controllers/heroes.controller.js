@@ -5,36 +5,51 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Hero
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.firstname) {
+    if (!req.body.first_name) {
       res.status(400).send({
         message: "Content can not be empty!"
       });
       return;
     }
         // Validate request
-    if (!req.body.lastname) {
+    if (!req.body.last_name) {
       res.status(400).send({
         message: "Content can not be empty!"
       });
       return;
     }
         // Validate request
-    if (!req.body.email) {
+    if (!req.body.email_address) {
       res.status(400).send({
         message: "Content can not be empty!"
       });
+      return;
+    }
+    // Validate request
+    if (!req.body.email_address) {
+      res.status(400).send({
+        message: "Content can not be empty!"
+      });
+      return;
+    }
+        // Validate request
+    if (!req.body.hero_points) {
+       res.status(400).send({
+         message: "Content can not be empty!"
+       });
       return;
     }
   
-    // Create a Tutorial
+    // Create a Hero
     const Heroes = {
-      firstname: req.body.firstname,
-      lastname: req.body.lastname,
-      email: req.body.email
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email_address: req.body.email_address,
+      hero_points: req.body.hero_points
     };
   
-    // Save Tutorial in the database
-    Heroes.create(heroes)
+    // Save Hero in the database
+    exports.create(Heroes)
       .then(data => {
         res.send(data);
       })
